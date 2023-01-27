@@ -1,8 +1,21 @@
 import pyb
 
 class MotorDriver:
+    '''!
+    This class implements a motor driver for an ME 405 kit.
+    '''
 
     def __init__(self, en_pin:str, in1pin:str, in2pin:str, timer:int, ch1:int, ch2:int):
+        '''!
+        Creates a motor driver and configures the appropriate pins, timers, and timer channels.
+        @param en_pin String containing the pin label of the enable pin (e.g. 'A10' for pin A10)
+        @param in1pin String containing the pin label of the first PWM channel
+        @param in2pin String containing the pin label of the second PWM channel
+        @param timer Number of the timer to configure, given as integer (e.g. 5 for TIM5)
+        @param ch1 The channel number of the first PWM channel, given as integer (e.g. 1 for TIMx CH1)
+        @param ch2 The channel number of the second PWM channel, given as integer
+        '''
+        
         # Pin and timer configurations
         self.en_pin = pyb.Pin(en_pin, pyb.Pin.OUT_PP) 
         self.in1pin = pyb.Pin(in1pin, pyb.Pin.OUT_PP) 
@@ -17,12 +30,22 @@ class MotorDriver:
         self.pwm2 = self.timer.channel(ch2, pyb.Timer.PWM, pin=self.in2pin)
 
     def enable_motor(self):
+        '''!
+        Enables the motor by driving the enable pin high.
+        '''
         self.en_pin.high()
 
     def disable_motor(self):
+        '''!
+        Disables the motor by driving the enable pin low.
+        '''
         self.en_pin.low()
 
     def set_duty_cycle (self, level:int):
+        '''!
+        Drives the motor at a given PWM percentage.
+        @param level PWM percentage to drive the motor at. The sign affects the direction the motor will be driven.
+        '''
         if level >= 0:
             if level > 100:
                 level = 100
