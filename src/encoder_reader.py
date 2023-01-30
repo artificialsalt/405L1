@@ -8,7 +8,7 @@ class EncoderReader:
     def __init__(self, pin1:str, pin2:str, timer:int, ch1:int, ch2:int):
         '''!
         Creates an encoder reader and configures the appropriate pins, timers, and timer channels.
-        @param pin1 String containing the pin label for the first encoder channel
+        @param pin1 String containing the pin label for the first encoder channel (e.g. 'A10' for pin A10)
         @param pin2 String containing the pin label for the second encoder channel
         @param timer Number of the timer to configure, given as integer (e.g. 5 for TIM5)
         @param ch1 The channel number of the first encoder channel, given as integer (e.g. 1 for TIMx CH1)
@@ -31,6 +31,7 @@ class EncoderReader:
         '''!
         Sets the current position of the encoder to zero (does not modify the timer count).
         '''
+        self.prev_cnt = self.timer.counter()
         self.position = 0
     
     def read(self):

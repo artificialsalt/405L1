@@ -43,8 +43,8 @@ class MotorDriver:
 
     def set_duty_cycle (self, level:int):
         '''!
-        Drives the motor at a given PWM percentage.
-        @param level PWM percentage to drive the motor at. The sign affects the direction the motor will be driven.
+        Drives the motor at a given duty cycle.
+        @param level PWM duty cycle to drive the motor at. Given as integer from -100 to 100 (inclusive). The sign affects the direction the motor will be driven.
         '''
         if level >= 0:
             if level > 100:
