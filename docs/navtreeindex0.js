@@ -1,0 +1,25 @@
+var NAVTREEINDEX0 =
+{
+"annotated.html":[0,0],
+"classencoder__reader_1_1_encoder_reader.html":[0,0,0,0],
+"classencoder__reader_1_1_encoder_reader.html#a2dbc8d461fe62bfa0461f99b644d9b02":[0,0,0,0,2],
+"classencoder__reader_1_1_encoder_reader.html#a62871b938c95c18a476d1a18505e3a69":[0,0,0,0,0],
+"classencoder__reader_1_1_encoder_reader.html#a9801116bbe535134eb87de5e513394d3":[0,0,0,0,1],
+"classes.html":[0,1],
+"classmotor__driver_1_1_motor_driver.html":[0,0,1,0],
+"classmotor__driver_1_1_motor_driver.html#a6952c8c5e84d206d2f9371b705665c8e":[0,0,1,0,3],
+"classmotor__driver_1_1_motor_driver.html#aaa52a5e97d8c6b01db0367dfb459bd99":[0,0,1,0,0],
+"classmotor__driver_1_1_motor_driver.html#ab10853f9df6392092a5daf1353ad5696":[0,0,1,0,2],
+"classmotor__driver_1_1_motor_driver.html#af910e20c48f8309d242b1335f36a7756":[0,0,1,0,1],
+"dir_3090d8fd39e74c61686f9d37f2fcf206.html":[1,0,0],
+"dir_4394a323aede855aa0409529a0cf4368.html":[1,0,0,0],
+"encoder__reader_8py.html":[1,0,0,0,0],
+"files.html":[1,0],
+"functions.html":[0,2,0],
+"functions_func.html":[0,2,1],
+"index.html":[],
+"lab1_8py.html":[1,0,0,0,1],
+"lab1_8py.html#a6f504c55bb8ec233d9664d10bc389e59":[1,0,0,0,1,0],
+"motor__driver_8py.html":[1,0,0,0,2],
+"pages.html":[]
+};

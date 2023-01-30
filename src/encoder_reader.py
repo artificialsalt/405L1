@@ -1,3 +1,12 @@
+'''!
+@file encoder_reader.py
+This file contains a class that allows the user to instantiate a motor encoder.
+
+@author Chayton Ritter, Richard Kwan, Jackie Chen
+@date 24-Jan-2023
+'''
+
+# Import pyboard module
 import pyb 
 
 class EncoderReader:
@@ -19,8 +28,8 @@ class EncoderReader:
         self.pin1 = pyb.Pin(pin1, pyb.Pin.OUT_PP)
         self.pin2 = pyb.Pin(pin2, pyb.Pin.OUT_PP)
         self.timer = pyb.Timer(timer, prescaler=0, period=0xFFFF)
-        self.ch1 = self.timer.channel(ch1, pyb.Timer.ENC_AB, pin=pin1)
-        self.ch2 = self.timer.channel(ch2, pyb.Timer.ENC_AB, pin=pin2)
+        self.ch1 = self.timer.channel(ch1, pyb.Timer.ENC_AB, pin=self.pin1)
+        self.ch2 = self.timer.channel(ch2, pyb.Timer.ENC_AB, pin=self.pin2)
 
         # Initialize encoder position to zero
         self.position = 0

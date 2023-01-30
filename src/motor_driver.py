@@ -1,3 +1,12 @@
+'''!
+@file motor_driver.py
+This file contains a class that allows the user to instantiate a motor driver.
+
+@author Chayton Ritter, Richard Kwan, Jackie Chen
+@date 24-Jan-2023
+'''
+
+# Import pyboard module
 import pyb
 
 class MotorDriver:
@@ -19,7 +28,7 @@ class MotorDriver:
         # Pin and timer configurations
         self.en_pin = pyb.Pin(en_pin, pyb.Pin.OUT_PP) 
         self.in1pin = pyb.Pin(in1pin, pyb.Pin.OUT_PP) 
-        self.in2pin = pyb.Pin(in2pin, pyb.sPin.OUT_PP)
+        self.in2pin = pyb.Pin(in2pin, pyb.Pin.OUT_PP)
         self.timer = pyb.Timer(timer, freq=20000)
 
         # Disables motor pin for safety
